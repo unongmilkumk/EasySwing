@@ -1,7 +1,6 @@
 package io.github.plus
 
 import io.github.plus.e2g.EasyComp
-import java.awt.event.ActionListener
 import javax.swing.JButton
 import javax.swing.JFrame
 
@@ -17,8 +16,8 @@ fun main() {
     f.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
 
     //기본적인 프레임 구성
-    val tf = ec.ETextField("",50, 50, 180, 20)
-    val b: JButton = EasyComp().EButton("누르지 마세요!", 80, 100, 90, 30, ActionListener(){tf.text = "Oh no"})
+    val tf = ec.eTextField("",50, 50, 180, 20)
+    val b: JButton = EasyComp().eButton("누르지 마세요!", 80, 100, 90, 30) { tf.text = "Oh no" }
 
     //프레임 구성 집어넣기
     f.add(b)
